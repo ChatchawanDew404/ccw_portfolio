@@ -1,0 +1,76 @@
+:root{
+    --red-color-1 : #f95353;
+   --red-colorHover-1 : rgb(147, 55, 55);
+}
+
+
+
+.contact{
+    padding: 10rem 0;
+}
+
+.contact form .inputBx{
+    display: grid;grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.contact form .inputBx input{
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    border: 1px solid white;
+
+}
+
+.contact form textarea:focus,
+.contact form .inputBx input:focus{
+   border: 1px solid var(--red-color-1);
+   outline: none;
+}
+
+.contact form textarea{
+    resize: none;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid white;
+}
+
+.contact button{
+    margin-top: 3rem;
+    text-align: center;
+display: inline-block;
+border-radius: .5rem;
+background:var(--red-color-1);
+color: white;
+padding: .8rem 2.5rem;
+outline: none;
+border: none;
+font-size: 1.6rem;
+transition: all .1s ease;
+cursor: pointer;
+}
+
+.contact button:hover{
+    background:var(--red-colorHover-1);
+    cursor: pointer;
+}
+
+.credit{
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: white;
+    font-size: 1.6rem;
+}
+
+
+/* MEDIA AUERY */
+@media screen and (max-width:768px){
+    .contact form .inputBx{
+        grid-template-columns: 1fr;
+    }
+}

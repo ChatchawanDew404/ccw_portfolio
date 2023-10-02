@@ -1,0 +1,193 @@
+:root{
+    --red-color-1 : #f95353;
+   --red-colorHover-1 : rgb(147, 55, 55);
+}
+
+
+.project{
+    transition: all .3s ease;
+}
+
+.project .swiper_layout{
+    height: 60vh;
+}
+
+.project .swiper-slide-bx  .image img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transform: scale(.7);
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+.project  .swiper-slide-active .image img{
+    transform: scale(1); 
+    opacity: 1;
+ }
+
+.project  .swiper-slide-bx .content{
+    opacity: 0;
+}
+
+
+.project  .swiper-slide-active .content{
+    transition: all .3s ease;
+    margin-top: 3rem;
+    opacity: 1;
+    height: 20rem;
+    text-align: center;
+}
+
+.project  .swiper-slide-active .content h2{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    border-radius: 2.5rem;
+    background: var(--red-color-1);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* project video */
+.project .container .project_video_youtube {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-bottom: 15rem;
+    text-align: center;
+}
+.project .container .project_video_youtube .box{
+    transform: scale(.8);
+}.project .container .project_video_youtube .box.bx_center{
+    transform: scale(1);
+}
+.project .container .project_video_youtube .box .image{
+padding: 1rem;
+background: rgb(255, 255, 255);
+box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+border-radius: 1rem;
+}
+.project .container  .project_video_youtube .box .image img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.project .container  .btn_to_video{
+    margin-top: 3rem;
+    text-align: center;
+display: inline-block;
+border-radius: .5rem;
+background:var(--red-color-1);
+color: white;
+padding: .8rem 2.5rem;
+outline: none;
+border: none;
+font-size: 1.6rem;
+transition: all .1s ease;
+cursor: pointer;
+}
+
+.project .container  .btn_to_video:hover{
+    cursor: pointer;
+    background:var(--red-colorHover-1);
+}
+
+
+
+/* MINI BANNER */
+
+.mini_banner{
+    background: url('/public/images/develoepr_img.jpg');
+    background-size: cover;
+    padding: 8rem 0;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+.mini_banner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+.mini_banner .content{
+    text-align: center;
+}
+
+.mini_banner .content h2{
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+}
+
+.mini_banner .content .mini_banner_btn{
+    text-align: center;
+    display: inline-block;
+    border-radius: .5rem;
+    background:var(--red-color-1);
+    color: white;
+    padding: .8rem 2.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    transition: all .1s ease;
+    cursor: pointer;
+}
+
+.mini_banner .content .mini_banner_btn:hover{
+    background-color: var(--red-colorHover-1);
+    cursor: pointer;
+}
+
+
+/* *{border: 1px solid red;} */
+
+
+@media screen and (max-width:768px){
+    .project .swiper_layout{
+        height: 100vh;
+    }
+    
+    .project .container .project_video_youtube {
+        gap: 0rem;
+    }
+
+    .project .container  .btn_to_video{
+    font-size: 1.4rem;
+    }
+    .project .container .project_video_youtube .box{
+        transform: scale(.85);
+    }.project .container .project_video_youtube .box.bx_center{
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width:567px){
+    .project .swiper_layout{
+        height: 80vh;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    .project .swiper_layout{
+        height: 70vh;
+    }
+    .project .container .project_video_youtube{
+        grid-template-columns: 1fr;
+        gap: 10rem;
+    }
+    .project .container .project_video_youtube .box{
+        transform: scale(1);
+    }
+}

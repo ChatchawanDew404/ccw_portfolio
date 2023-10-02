@@ -1,0 +1,120 @@
+:root{
+    --red-color-1 : #f95353
+    --red-colorHover-1 : rgb(147, 55, 55);
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: #202931;
+}
+
+nav.nav_active{
+    background: #ffffff;
+    transition: all .3s ease;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+nav.nav_active .container .nav-box li{
+    color: black;
+}
+
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 2rem;
+}
+
+nav .container .logo{
+    font-size: 3.5rem;
+    color: var(--red-color-1);
+    font-weight: 800;
+}
+
+nav .container .nav-box{
+    display: flex;
+    gap: 4rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+
+nav .container .nav-box li{
+    color: white;
+    transition: all .1s ease;
+}
+nav .container .nav-box li:hover{
+    color:var(--red-color-1) ;
+    cursor: pointer;
+}
+
+
+/* burgerBar */
+nav .container .burgerBar{
+    display: none;
+}
+
+
+
+
+/* Media query  */
+@media screen and (max-width:768px){
+    nav .container .burgerBar{
+        display: block;
+        font-size: 3rem;
+        color: white;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .8rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    nav .container .nav-box{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        opacity: 1;
+        /* height: 0rem; */
+        left: 0;
+        background: rgb(247, 247, 247);
+        clip-path: polygon(0 0 , 100% 0 , 100% 100%, 0 100% );
+        z-index: 10;
+        display: block;
+        text-align: center;
+        padding: 2rem 1rem;
+        transition: all .5s ease;
+        border-bottom: 2px solid rgb(32, 41, 49,0.5);
+    }
+
+    nav .container .nav-box.active{
+        opacity: 0 ;
+        clip-path:  polygon(0% 0, 100% 0%, 100% 0%, 0 00%);
+    }
+    nav .container .nav-box li .navLink{
+        display: block;
+        color: black;
+        padding:1.5rem 2rem;
+        border: 1px solid rgb(208, 206, 206);
+        margin: 2rem;
+        border-radius: 1rem;
+    }
+    nav .container .nav-box li .navLink:hover{
+        border: 1px solid var(--red-color-1);
+        color: var(--red-color-1);
+        cursor: pointer;
+    }
+    nav.nav_active .burgerBar{
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+    }
+    
+}
+

@@ -1,0 +1,135 @@
+:root{
+    --red-color-1 : #f95353;
+   --red-colorHover-1 : rgb(147, 55, 55);
+   --gray1:rgb(114, 114, 114);
+   --gray2:rgb(92, 92, 92);
+}
+
+.about{
+    padding: 10rem 0;
+}
+.about .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about .container .content .colorTx{
+    color: var(--red-color-1);
+}
+
+.about .container .image{
+    border: 1rem solid rgb(249, 249, 249);
+    border-radius: 1rem;
+    box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 100%;
+    max-width: 80rem;
+    max-height: 60rem;
+    position: relative;
+}
+
+.about .container .image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    object-fit: cover;
+}
+
+
+.about .container .content h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.about .container .content p{
+    line-height: 2.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: var(--gray2);
+}
+
+.about .container .content .dataBx{
+    display: flex;
+    gap: 8rem;
+    margin-bottom: 2rem;
+}
+
+.about .container .content .dataBx .rightData ul li{
+   color: var(--gray2);
+}
+.about .container .content .dataBx ul li{
+   font-size: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+
+
+.about .container .content .about_Btn{
+    display: inline-block;
+    border-radius: .5rem;
+    background:var(--red-color-1);
+    color: white;
+    padding: 1.2rem 3rem;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    transition: all .1s ease;
+    cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:991px){
+    .about .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:768px){
+    .about .container{
+        grid-template-columns: 1fr;
+    }
+
+    .about .container .image{
+        height: 100rem;
+    }
+}
+
+@media screen and (max-width:480px){
+    .about .container .image{
+        height: 50rem;
+    }
+
+    .about .container .content .dataBx{
+        margin-bottom: 4rem;
+    }
+
+
+}
+
+
+@media screen and (max-width:380px){
+    .about .container .content h2{
+        font-size: 2.5rem;
+    }
+    .about .container .content .dataBx {
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .about .container .content .dataBx .leftData ul li{
+        font-size: 1.4rem;
+     }
+    .about .container .content .dataBx .rightData ul li{
+        font-size: 1.4rem;
+     }
+}

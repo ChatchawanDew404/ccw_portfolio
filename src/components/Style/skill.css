@@ -1,0 +1,56 @@
+:root{
+    --red-color-1 : #f95353;
+   --red-colorHover-1 : rgb(147, 55, 55);
+   --gray1:rgb(114, 114, 114);
+   --gray2:rgb(92, 92, 92);
+}
+
+.skill{
+    padding: 10rem 0;
+}
+
+.skill .container .row{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 4rem;
+    text-align: center;
+}
+.skill .container .row .col{
+    background: white;
+    border-radius: .5rem;
+    border-bottom: 2px solid var(--red-color-1);
+    padding:4rem 3rem;
+    transition: all .3s ease;
+}
+
+.skill .container .row .col:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.07);
+}
+
+.skill .container .row .col img{
+    height: 6rem;
+}
+
+
+@media only screen and (max-width:991px){
+    .skill .container .row{
+        grid-template-columns: repeat(4,1fr);
+        gap: 3rem;
+    }
+}
+    
+@media only screen and (max-width:678px){
+    .skill .container .row{
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+    
+@media only screen and (max-width:380px){
+    .skill .container .row{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+    
